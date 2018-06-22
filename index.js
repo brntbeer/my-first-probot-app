@@ -8,3 +8,10 @@ module.exports = app => {
   // To get your app running against GitHub, see:
   // https://probot.github.io/docs/development/
 }
+
+module.exports = robot => {
+  robot.on('issues.opened', async context => {
+    // An issue was just opened.
+    robot.log(context)
+  })
+}
